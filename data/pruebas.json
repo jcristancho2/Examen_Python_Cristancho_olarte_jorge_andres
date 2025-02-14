@@ -1,0 +1,10 @@
+[
+    {
+        "base": 1000,
+        "IVA": 100.0,
+        "impuesto_especial": 0,
+        "impuesto_local": 0,
+        "otros": 0,
+        "total": 1100.0
+    }
+]
