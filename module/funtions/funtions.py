@@ -104,13 +104,46 @@ def ver():
     option = int(vd.validateInt(dec.inn))
     match option:
         case 1:
-            
+            dic_control = {**js.leerJson(NAME_ARC)}
+            buscar = 'IVA'
+            busqueda = [data for data in dic_control.values() if data.get('IVA') == buscar]
+            if busqueda:
+                print(tabulate(busqueda, headers = 'keys' , tablefmt='rounded_outline'))
+            else:
+                print('no se encontro el elementos')
+            cc.LLScreen()
+            return ver()
+
         case 2:
-            pass
+            dic_control = {**js.leerJson(NAME_ARC)}
+            buscar = 'impuesto_especial'
+            busqueda = [data for data in dic_control.values() if data.get('IVA') == buscar]
+            if busqueda:
+                print(tabulate(busqueda, headers = 'keys' , tablefmt='rounded_outline'))
+            else:
+                print('no se encontro el elementos')
+            cc.LLScreen()
+            return ver()
         case 3:
-            pass
+            dic_control = {**js.leerJson(NAME_ARC)}
+            buscar = 'impuesto_local'
+            busqueda = [data for data in dic_control.values() if data.get('IVA') == buscar]
+            if busqueda:
+                print(tabulate(busqueda, headers = 'keys' , tablefmt='rounded_outline'))
+            else:
+                print('no se encontro el elementos')
+            cc.LLScreen()
+            return ver()
         case 4:
-            pass
+            dic_control = {**js.leerJson(NAME_ARC)} 
+            buscar = 'otros'
+            busqueda = [data for data in dic_control.values() if data.get('IVA') == buscar]
+            if busqueda:
+                print(tabulate(busqueda, headers = 'keys' , tablefmt='rounded_outline'))
+            else:
+                print('no se encontro el elementos')
+            cc.LLScreen()
+            return ver()
         case _:
             print (ERROR)    
 
